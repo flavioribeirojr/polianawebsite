@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url('/static/fonts/Proxima-Nova-Soft-Regular/Proxima-Nova-Soft-Regular.ttf')
+}
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url('/static/fonts/proxima-nova-condensed-light.otf');
+}
+
+@font-face {
+  font-family: ProximaNovaSemiBold;
+  src: url('/static/fonts/proxima-nova-condensed-semibold.otf');
+}
+
+* {
+  font-family: ProximaNova, sans-serif;
+  box-sizing: border-box;
+}

@@ -1,0 +1,54 @@
+nav {
+  ul.links {
+    padding-left: 0;
+    list-style: none;
+
+    >li {
+      display: inline-block;
+      padding: 0 1.5rem;
+
+      >a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 0.5rem 0;
+
+        &.active {
+          color: $linkActive;
+        }
+        &:hover {
+          &:not(.active) {
+            color: $linkActive;
+            animation: hoverColor .1s linear;
+          }
+
+          &::after {
+            animation: borderGrow .2s linear;
+            content: '';
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid $linkActive;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes hoverColor {
+  from {
+    color: white;
+  } to {
+    color: $linkActive;
+  }
+}
+
+@keyframes borderGrow {
+  from {
+    width: 0;
+  } to {
+    width: 100%;
+  }
+}
