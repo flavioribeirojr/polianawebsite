@@ -1,0 +1,68 @@
+section.depositions {
+  min-height: 150px;
+  padding: 5rem 6rem;
+
+  >.title {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: ProximaNovaSemiBold;
+    color: #272626;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+  >.subtitle {
+    color: #717171;
+    margin-top: 2rem;
+    padding: 0 12rem;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    font-family: ProximaNovaLight;
+    line-height: 1.5rem;
+  }
+
+  >.cards {
+    display: flex;
+    margin-top: 3rem;
+
+    >* {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .item {
+      padding: 10px 30px;
+
+      .name {
+        font-family: ProximaNovaLight;
+        color: $linkActive;
+        font-size: 1.5em;
+        margin-top: 1rem;
+      }
+  
+      img {
+        width: 50%;
+        border-radius: 50%;
+      }
+
+      .text {
+        font-family: ProximaNovaLight;
+        font-weight: lighter;
+        line-height: 1.5em;
+        text-align: center;
+        color: #a1a1a1;
+        margin: 0;
+        font-size: 1.1em;
+    
+        &::before {
+          content: '\201C';
+          font-size: 3em;
+          color: $linkActive;
+          line-height: 0;
+          margin-right: 0.2em;
+          vertical-align: -.4em;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 body {
   margin: 0;
 }
@@ -19,6 +28,11 @@ h1,h2,h3,h4,h5,h6 {
 @font-face {
   font-family: ProximaNovaSemiBold;
   src: url('/static/fonts/proxima-nova-condensed-semibold.otf');
+}
+
+@font-face {
+  font-family: DancingScript;
+  src: url('/static/fonts/DancingScript/DancingScript-Regular.ttf');
 }
 
 * {
