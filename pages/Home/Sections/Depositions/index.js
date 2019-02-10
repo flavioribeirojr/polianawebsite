@@ -42,7 +42,7 @@ const CardBody = () => (
 )
 
 const Depositions = () => (
-  <section className={styles.depositions}>
+  <section className={styles.depositions} id="depositions">
     <h1 className={styles.title}>Depoimentos</h1>
     <h2 className={styles.subtitle}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -51,7 +51,7 @@ const Depositions = () => (
       <Slider {...carousel}>
         {
           [0, 1, 2, 3].map((_, idx) => (
-            <div className={styles.item}>
+            <div className={styles.item} key={idx}>
               <Card
                 Header={CardHeader}
                 Body={CardBody}

@@ -13,6 +13,7 @@ nav {
         font-size: 1.1em;
         padding: 0.5rem 0;
         position: relative;
+        cursor: pointer;
 
         &.active {
           color: $linkActive;
@@ -21,17 +22,6 @@ nav {
           &:not(.active) {
             color: $linkActive;
             animation: hoverColor .1s linear;
-          }
-
-          &::after {
-            animation: borderGrow .2s linear;
-            content: '';
-            display: block;
-            width: 115%;
-            border-bottom: 1px solid $linkActive;
-            position: absolute;
-            bottom: 0;
-            left: -7%;
           }
         }
       }
@@ -84,6 +74,13 @@ nav {
         >a {
           color: $gray;
           font-size: 1.2em;
+
+          &:hover {
+            &:not(.active) {
+              color: $linkActive;
+              animation: hoverColorInverse .1s linear;
+            }
+          }
         }
       }
     }

@@ -1,29 +1,47 @@
 import React from 'react'
-import styles from './HeaderNav.scss';
+import { Link } from 'react-scroll'
+import styles from './HeaderNav.scss'
 
-const HeaderNav = ({ inverse, showMobileMenu }) => (
+const navigation = [
+  {
+    to: 'home',
+    name: 'Início'
+  },
+  {
+    to: 'depositions',
+    name: 'Depoimentos'
+  },
+  {
+    to: '',
+    name: 'Artigos'
+  },
+  {
+    to: '',
+    name: 'Contato'
+  }
+]
+
+const HeaderNav = ({ inverse, showMobileMenu, onItemClick }) => (
   <nav className={`${inverse && styles.inverse} ${ showMobileMenu && styles['show-mobile-menu'] }`}>
     <ul className={styles.links}>
-      <li>
-        <a href="#" className={styles.active}>
-          Início
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Depoimentos
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Artigos
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Contato
-        </a>
-      </li>
+      {
+        navigation
+          .map(({ to, name }, idx) => (
+            <li key={idx}>
+              <Link
+                activeClass={styles.active}
+                to={to}
+                smooth={true}
+                offset={-70}
+                duration= {500}
+                spy={true}
+                onClick={() => onItemClick()}
+              >
+                { name }
+              </Link>
+            </li>
+          ))
+      }
     </ul>
   </nav>
 )

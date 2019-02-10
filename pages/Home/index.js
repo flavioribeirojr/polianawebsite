@@ -9,7 +9,7 @@ const Header = Dynamic(import('@/Header'))
 const Home = () => (
   <section>
     <Header />
-    <section className={styles.home}>
+    <section id="home" className={styles.home}>
       <section className={styles.body}>
         <h1 className={styles.description}>Lorem ipsum dolor sit amet</h1>
         <p className={styles['description-subtitle']}>

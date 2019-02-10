@@ -36,6 +36,7 @@ function Header() {
       <HeaderNav
         inverse={isInverse}
         showMobileMenu={showMenu}
+        onItemClick={toggleMenu}
       />
     </header>
   )
