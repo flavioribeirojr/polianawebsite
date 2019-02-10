@@ -12,6 +12,7 @@ nav {
         text-decoration: none;
         font-size: 1.1em;
         padding: 0.5rem 0;
+        position: relative;
 
         &.active {
           color: $linkActive;
@@ -26,10 +27,32 @@ nav {
             animation: borderGrow .2s linear;
             content: '';
             display: block;
-            width: 100%;
+            width: 115%;
             border-bottom: 1px solid $linkActive;
             position: absolute;
             bottom: 0;
+            left: -7%;
+          }
+        }
+      }
+    }
+  }
+
+  &.inverse {
+    >ul.links {
+      >li {
+        >a {
+          color: $text;
+
+          &.active {
+            color: $linkActive;
+          }
+
+          &:hover {
+            &:not(.active) {
+              color: $linkActive;
+              animation: hoverColorInverse .1s linear;
+            }
           }
         }
       }
@@ -40,6 +63,14 @@ nav {
 @keyframes hoverColor {
   from {
     color: white;
+  } to {
+    color: $linkActive;
+  }
+}
+
+@keyframes hoverColorInverse {
+  from {
+    color: gray;
   } to {
     color: $linkActive;
   }

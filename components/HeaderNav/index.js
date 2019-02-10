@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './HeaderNav.scss';
 
-const HeaderNav = () => (
-  <nav>
+const HeaderNav = ({ inverse }) => (
+  <nav className={inverse ? styles.inverse : ''}>
     <ul className={styles.links}>
       <li>
         <a href="#" className={styles.active}>
