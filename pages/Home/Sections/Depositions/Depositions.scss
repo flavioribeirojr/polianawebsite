@@ -65,4 +65,19 @@ section.depositions {
       }
     }
   }
+
+  @media screen and (max-width: 992px) {
+    padding: 3rem 2rem;
+
+    >.subtitle {
+      padding: 0;
+      line-height: 2rem;
+    }
+
+    >.cards {
+      .item {
+        padding: 10px 4px;
+      }
+    }
+  }
 }

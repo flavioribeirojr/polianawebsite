@@ -23,17 +23,6 @@ section.home {
     color: white;
   }
 
-  >section.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    >.title {
-      font-size: 2em;
-      font-family: DancingScript;
-    }
-  }
-
   >.body {
     display: flex;
     flex-grow: 1;
@@ -78,6 +67,19 @@ section.home {
       padding: 2rem;
       animation: ghost 2s linear;
       animation-iteration-count: infinite;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0;
+    background-position: center center;
+
+    >.body {
+      padding: 1rem 0;
+    }
+
+    >.footer {
+      padding: 1rem 0;
     }
   }
 }

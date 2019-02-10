@@ -2,14 +2,28 @@ import React, { Fragment } from 'react'
 import styles from './Depositions.scss'
 import Slider from 'react-slick'
 import Card from '@/Card'
+import { CarouselDots, CarouselArrows } from '@/Carousel'
 
 const carousel = {
+  autoplay: true,
+  autoplaySpeed: 14000,
   dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 3,
-  centerPadding: '100px'
+  slidesToScroll: 1,
+  appendDots: CarouselDots,
+  nextArrow: <CarouselArrows icon="angle-right" />,
+  prevArrow: <CarouselArrows icon="angle-left" />,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
 }
 
 const CardHeader = () => (

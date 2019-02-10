@@ -1,5 +1,5 @@
 nav {
-  ul.links {
+  >ul.links {
     padding-left: 0;
     list-style: none;
 
@@ -55,6 +55,42 @@ nav {
             }
           }
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 5px #b6b6b6;
+    background: white;
+    height: 100vh;
+    transition: .15s linear all;
+
+    &.show-mobile-menu {
+      width: 50%;
+      transition: .15s linear all;
+    }
+
+    >ul.links {
+      margin-top: 50px;
+
+      >li {
+        display: block;
+        margin-bottom: 1.5rem;
+
+        >a {
+          color: $gray;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    &.inverse {
+      >.menu-toggler {
+        color: $gray;
       }
     }
   }

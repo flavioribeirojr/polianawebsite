@@ -2,10 +2,13 @@ import React from 'react'
 import Head from 'next/head';
 import Home from './Home';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faBars, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './index.scss';
 
 library.add(faAngleDown)
+library.add(faBars)
+library.add(faAngleLeft)
+library.add(faAngleRight)
 
 export default () => (
   <div>
