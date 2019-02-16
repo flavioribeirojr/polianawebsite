@@ -2,7 +2,9 @@ import React from 'react'
 import Dynamic from 'next/dynamic'
 import styles from './Home.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-scroll'
 import Depositions from './Sections/Depositions'
+import Newsletter from './Sections/Newsletter'
 
 const Header = Dynamic(import('@/Header'))
 
@@ -17,12 +19,19 @@ const Home = () => (
         </p>
       </section>
       <div className={styles.footer}>
-        <button>
+        <Link
+          to="depositions"
+          smooth={true}
+          offset={-70}
+          duration= {500}
+          spy={true}
+        >
           <FontAwesomeIcon icon="angle-down" />
-        </button>
+        </Link>
       </div>
     </section>
     <Depositions />
+    <Newsletter />
   </section>
 )
 

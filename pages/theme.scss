@@ -1,0 +1,45 @@
+input.input {
+  border-radius: 4px;
+  padding: 0.7rem 1rem;
+  border: 0;
+  width: 100%;
+  color: #717171;
+  font-size: 1em;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:focus {
+    border: 1px solid #f67280;
+  }
+
+  &.large {
+    padding: 0.9rem 1.2rem;
+    font-size: 1.2em;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.button {
+  border-radius: 2rem;
+  border: 1px solid $lightGray;
+  padding: .8rem 2rem;
+  background-color: white;
+  color: $gray;
+  cursor: pointer;
+
+  &.large {
+    font-size: 1.1em;
+    padding: 1rem 3rem;
+  }
+
+  &.primary {
+    background-color: $pink;
+    color: white;
+    border: 0;
+  }
+}
