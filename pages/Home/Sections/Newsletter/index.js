@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import withNotification from '@/HOCS/Notification'
+import Validator from 'domains/Newsletter/validator'
 import styles from './Newsletter.scss'
 import theme from 'pages/theme.scss'
 
@@ -8,11 +9,21 @@ const Newsletter = ({ displayNotification }) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    
-    displayNotification({
-      title: 'Assinatura confirmada',
-      message: 'Muito obrigado por assinar nossa newsletter. Você terá notícias nossas em breve!',
-      type: 'success'
+
+    Validator({ email }, (err) => {
+      if (err) {
+        return displayNotification({
+          title: 'Atenção',
+          message: 'Por favor, entre com email válido para assinar nossa Newsletter.',
+          type: 'warning'
+        })
+      }
+ 
+      displayNotification({
+        title: 'Assinatura confirmada!',
+        message: 'Muito obrigado por assinar nossa newsletter. Você terá notícias nossas em breve!',
+        type: 'success'
+      })
     })
   }
    
@@ -35,7 +46,7 @@ const Newsletter = ({ displayNotification }) => {
         </div>
         <div>
           <button className={`${theme.button} ${theme.primary} ${theme.large}`} type="submit">
-            Submit
+            Confirmar assinatura
           </button>
         </div>
       </form>

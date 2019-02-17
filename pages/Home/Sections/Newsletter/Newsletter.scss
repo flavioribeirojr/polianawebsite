@@ -50,4 +50,18 @@ section.newsletter {
       margin-bottom: 20px;      
     }
   }
+
+  @media screen and (max-width: 992px) {
+    padding: 2rem 0;
+
+    >.description {
+      padding: 1rem 0;
+    }
+
+    >form {
+      >.input-box {
+        width: 90%;
+      }
+    }
+  }
 }
