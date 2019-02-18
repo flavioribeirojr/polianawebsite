@@ -12,7 +12,7 @@ const navigation = [
     name: 'Depoimentos'
   },
   {
-    to: '',
+    to: 'articles',
     name: 'Artigos'
   },
   {

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-scroll'
 import Depositions from './Sections/Depositions'
 import Newsletter from './Sections/Newsletter'
+import Articles from './Sections/Articles'
 
 const Header = Dynamic(import('@/Header'))
 
@@ -32,6 +33,7 @@ const Home = () => (
     </section>
     <Depositions />
     <Newsletter />
+    <Articles />
   </section>
 )
 

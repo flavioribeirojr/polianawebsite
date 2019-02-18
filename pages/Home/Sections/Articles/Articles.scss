@@ -1,0 +1,14 @@
+section.articles {
+  margin-top: 1rem;
+  padding: 4rem 0rem;
+
+  >.articlesPreview {
+    padding: 1rem 9rem;
+    display: flex;
+
+    >.articlePreviewCard {
+      width: 33.33%;
+      padding: 0 1rem;
+    }
+  }
+}

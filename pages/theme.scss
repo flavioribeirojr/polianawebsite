@@ -43,3 +43,21 @@ input.input {
     border: 0;
   }
 }
+
+.sectionTitle {
+  font-size: 1.3em;
+  text-align: center;
+  font-family: ProximaNovaSemiBold;
+  color: #272626;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.sectionDescription {
+  font-size: 1.1em;
+  padding: 1.5rem 10rem;
+  text-align: center;
+  color: #717171;
+  font-family: ProximaNovaLight;
+  font-weight: 300;
+}
