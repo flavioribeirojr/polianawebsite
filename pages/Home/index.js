@@ -6,6 +6,7 @@ import { Link } from 'react-scroll'
 import Depositions from './Sections/Depositions'
 import Newsletter from './Sections/Newsletter'
 import Articles from './Sections/Articles'
+import Benefits from './Sections/Benefits'
 
 const Header = Dynamic(import('@/Header'))
 
@@ -31,8 +32,9 @@ const Home = () => (
         </Link>
       </div>
     </section>
-    <Depositions />
+    <Benefits />
     <Newsletter />
+    <Depositions />
     <Articles />
   </section>
 )

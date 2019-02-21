@@ -8,6 +8,10 @@ const navigation = [
     name: 'Início'
   },
   {
+    to: 'benefits',
+    name: 'Benefícios'
+  },
+  {
     to: 'depositions',
     name: 'Depoimentos'
   },

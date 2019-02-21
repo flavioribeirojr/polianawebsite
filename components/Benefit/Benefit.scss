@@ -1,0 +1,34 @@
+article.benefit {
+  display: flex;
+
+  &.right {
+    flex-direction: row-reverse;
+  }
+
+  >img {
+    width: 50%;
+  }
+
+  >.info {
+    padding: 3rem 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    >.title {
+      font-size: 2em;
+      font-family: ProximaNovaSemiBold;
+      font-weight: 300;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    >.description {
+      color: $gray;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      font-family: ProximaNovaLight;
+    }
+  }
+}
