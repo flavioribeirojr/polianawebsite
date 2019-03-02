@@ -11,4 +11,16 @@ section.articles {
       padding: 0 1rem;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    >.articlesPreview {
+      padding: 1rem;
+      flex-direction: column;
+
+      >.articlePreviewCard {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
 }
