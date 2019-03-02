@@ -1,0 +1,84 @@
+.galleryItem {
+  width: 24%;
+  height: 20rem;
+  overflow-y: hidden;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  margin: .8rem 2.5rem;
+  overflow: hidden;
+  
+  ::before {
+    background: transparent;
+    transition: .3s linear all;
+  }
+
+  >img {
+    width: 100%;
+  }
+
+  >figcaption {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    color: white;
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+    transition: .3s linear all;
+  }
+
+  &:hover {
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #f67280e6;//linear-gradient(to bottom, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
+      transition: .3s linear all;
+      animation: fadeColor .3s linear;
+    }
+
+    >figcaption {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid $lightGray;
+    padding-bottom: 1rem;
+
+    >figcaption {
+      opacity: 1;
+      position: relative;
+      color: $gray;
+      font-family: ProximaNova;
+      font-size: 1em;
+    }
+
+    &:hover {
+      &::before {
+        background: transparent;
+        transition: none;
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes fadeColor {
+  from {
+    background: transparent;
+  } to {
+    background: #f67280e6;
+  }
+}

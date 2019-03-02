@@ -1,0 +1,14 @@
+section.gallery {
+  background: white;
+
+  >h1 {
+    padding: 2rem 0;
+  }
+
+  >.instagramGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
