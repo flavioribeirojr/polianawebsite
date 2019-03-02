@@ -31,4 +31,21 @@ article.benefit {
       font-family: ProximaNovaLight;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+
+    &.right {
+      flex-direction: column;
+    }
+
+    >img {
+      width: 100%;
+    }
+
+    >.info {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
