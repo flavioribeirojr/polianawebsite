@@ -1,14 +1,29 @@
 import React from 'react'
 import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDown, faBars, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import { ToastContainer, toast } from 'react-toastify'
+import {
+  faAngleDown,
+  faBars,
+  faAngleLeft,
+  faAngleRight,
+  faEnvelope
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faWhatsapp,
+  faInstagram,
+  faFacebook
+} from '@fortawesome/free-brands-svg-icons'
+import { ToastContainer } from 'react-toastify'
 import './index.scss';
 
 library.add(faAngleDown)
 library.add(faBars)
 library.add(faAngleLeft)
 library.add(faAngleRight)
+library.add(faEnvelope)
+library.add(faWhatsapp)
+library.add(faInstagram)
+library.add(faFacebook)
 
 export default ({ children }) => (
   <div>

@@ -7,6 +7,7 @@ import Depositions from './Sections/Depositions'
 import Newsletter from './Sections/Newsletter'
 import Articles from './Sections/Articles'
 import Benefits from './Sections/Benefits'
+import Contact from './Sections/Contact'
 import AppWrapper from 'pages/AppWrapper'
 
 const Header = Dynamic(import('@/Header'))
@@ -25,7 +26,7 @@ const Home = () => (
         </section>
         <div className={styles.footer}>
           <Link
-            to="depositions"
+            to="benefits"
             smooth={true}
             offset={-70}
             duration= {500}
@@ -38,6 +39,7 @@ const Home = () => (
       <Benefits />
       <Newsletter />
       <Depositions />
+      <Contact />
       <InstagramFeed />
       <Articles />
     </section>

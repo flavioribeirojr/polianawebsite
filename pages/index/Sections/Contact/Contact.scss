@@ -1,0 +1,68 @@
+section.contact {
+  background-image: url('/static/images/contact.jpg');
+  padding: 3rem 5rem;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(185, 78, 176, 0.8) 0%, rgba(60, 126, 182, 0.8) 100%);
+  }
+
+  * {
+    position: relative;
+  }
+
+  >.title {
+    font-size: 2em;
+    color: white;
+    font-family: ProximaNovaSemiBold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-align: center;
+  }
+
+  >.description {
+    font-family: ProximaNovaLight;
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 300;
+  }
+
+  >.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding: 0 10rem;
+
+    >.contactItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-size: 3.5em;
+
+      >.label {
+        color: white;
+        margin-top: .8rem;
+        font-size: .4em;
+        font-family: ProximaNovaLight;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@keyframes hoverColor {
+  from {
+    color: white;
+  } to {
+    color: $linkActive;
+  }
+}
