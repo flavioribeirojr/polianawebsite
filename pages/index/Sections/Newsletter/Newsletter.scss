@@ -54,12 +54,13 @@ section.newsletter {
     padding: 2rem 0;
 
     >.description {
-      padding: 1rem 0;
+      padding: 1.5rem 0;
     }
 
     >form {
       >.input-box {
         width: 90%;
+        margin-bottom: 3rem;
       }
     }
   }
