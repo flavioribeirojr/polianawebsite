@@ -29,7 +29,12 @@ const navigation = [
   }
 ]
 
-const HeaderNav = ({ inverse, showMobileMenu, onItemClick }) => (
+const HeaderNav = ({
+  inverse,
+  showMobileMenu,
+  isHome,
+  onItemClick
+}) => (
   <nav className={`${inverse && styles.inverse} ${ showMobileMenu && styles['show-mobile-menu'] }`}>
     <ul className={styles.links}>
       {
@@ -44,7 +49,8 @@ const HeaderNav = ({ inverse, showMobileMenu, onItemClick }) => (
                 offset={-70}
                 duration= {500}
                 spy={true}
-                onClick={() => onItemClick()}
+                onClick={() => isHome ? onItemClick() : window.location.replace(`/#${to}`)}
+                href={`/#${to}`}                
               >
                 { name }
               </Link>

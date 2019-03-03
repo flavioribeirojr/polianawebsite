@@ -4,18 +4,24 @@ import HeaderNav from '@/HeaderNav'
 import styles from './Header.scss'
 import { getScroll } from 'utils/scroll'
 
-function Header() {
-  const [isInverse, setInverse] = useState(false)
+function Header({ isHome }) {
+  const [isInverse, setInverse] = useState(!isHome)
   const [showMenu, setShowMenu] = useState(false)
+
+  const changeTheme = (scrolledEnough) => {
+    if (isHome) {
+      setInverse(scrolledEnough)
+    }
+  }
 
   const toggleMenu = () => setShowMenu(!showMenu)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setInverse(getScroll().y > 50)
+      changeTheme(getScroll().y > 50)
     })
 
-    setInverse(getScroll().y > 50)
+    changeTheme(getScroll().y > 50)
   })
 
   return (
@@ -37,9 +43,14 @@ function Header() {
         inverse={isInverse}
         showMobileMenu={showMenu}
         onItemClick={toggleMenu}
+        isHome={isHome}
       />
     </header>
   )
+}
+
+Header.defaultProps = {
+  showInverse: true
 }
 
 export default Header
