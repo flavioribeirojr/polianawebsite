@@ -9,10 +9,10 @@ import Articles from './Sections/Articles'
 import Benefits from './Sections/Benefits'
 import Contact from './Sections/Contact'
 import Footer from './Sections/Footer'
+import InstagramFeed from './Sections/InstagramFeed'
 import AppWrapper from 'pages/AppWrapper'
 
 const Header = Dynamic(import('@/Header'))
-const InstagramFeed = Dynamic(import('./Sections/InstagramFeed'))
 
 const Home = () => (
   <AppWrapper>
