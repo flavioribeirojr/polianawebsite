@@ -20,6 +20,10 @@ const navigation = [
     name: 'Contato'
   },
   {
+    to: 'gallery',
+    name: 'Galeria'
+  },
+  {
     to: 'articles',
     name: 'Artigos'
   }
@@ -33,6 +37,7 @@ const HeaderNav = ({ inverse, showMobileMenu, onItemClick }) => (
           .map(({ to, name }, idx) => (
             <li key={idx}>
               <Link
+                hashSpy
                 activeClass={styles.active}
                 to={to}
                 smooth={true}

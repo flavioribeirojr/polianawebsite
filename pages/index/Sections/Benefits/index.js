@@ -27,7 +27,7 @@ const getBenefitPosition = (num) => (
 
 const Benefits = () => (
   <section id="benefits" className={styles.benefits}>
-    <h1 className={theme.sectionTitle}>Benefícios para você</h1>
+    <h1 className={theme.sectionTitle}>Benefícios</h1>
     <div>
       {
         benefits
