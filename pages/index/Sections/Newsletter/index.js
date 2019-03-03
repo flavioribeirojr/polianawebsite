@@ -36,7 +36,7 @@ const Newsletter = ({ displayNotification }) => {
       <form onSubmit={onSubmit}>
         <div className={styles['input-box']}>
           <input
-            type="text"
+            type="email"
             name="newletter_email"
             placeholder="Digite o seu melhor email!"
             className={`${theme.input} ${theme.large} ${theme.textCenter}`}
