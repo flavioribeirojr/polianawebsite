@@ -8,6 +8,7 @@ import Newsletter from './Sections/Newsletter'
 import Articles from './Sections/Articles'
 import Benefits from './Sections/Benefits'
 import Contact from './Sections/Contact'
+import Footer from './Sections/Footer'
 import AppWrapper from 'pages/AppWrapper'
 
 const Header = Dynamic(import('@/Header'))
@@ -15,7 +16,7 @@ const InstagramFeed = Dynamic(import('./Sections/InstagramFeed'))
 
 const Home = () => (
   <AppWrapper>
-    <section>
+    <>
       <Header />
       <section id="home" className={styles.home}>
         <section className={styles.body}>
@@ -42,7 +43,8 @@ const Home = () => (
       <Contact />
       <InstagramFeed />
       <Articles />
-    </section>
+      <Footer />
+    </>
   </AppWrapper>
 )
 

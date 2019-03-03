@@ -1,0 +1,25 @@
+.footer {
+  background: $darkerBlack;
+  padding: 5rem 6rem;
+
+  >.title {
+    color: white;
+    font-family: DancingScript;
+    text-align: center;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 1rem;
+  }
+
+  >.subtitle {
+    padding-top: 1rem;
+    color: white;
+    font-family: ProximaNovaLight;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 5rem 2rem;
+  }
+}
