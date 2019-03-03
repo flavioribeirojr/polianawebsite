@@ -57,6 +57,19 @@ section.contact {
       }
     }
   }
+
+  @media screen and (max-width: 992px) {
+    padding: 3rem 0;
+
+    >.contacts {
+      flex-direction: column;
+      padding: 0;
+
+      >.contactItem:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
 }
 
 @keyframes hoverColor {
