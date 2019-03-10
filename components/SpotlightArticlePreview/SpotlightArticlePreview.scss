@@ -1,0 +1,39 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  >figure.cover {
+    height: 170px;
+    overflow-y: hidden;
+    margin: 0;
+
+    &.big {
+      height: 100%;
+    }
+
+    >img {
+      width: 100%;
+    }
+  }
+
+  >.title {
+    font-family: ProximaNovaCondensed;
+    color: $black;
+    padding: .5rem 0;
+
+    &.big {
+      font-size: 2.5em;
+      padding: .8rem 0;
+    }
+  }
+
+  >article.description {
+    color: $gray;
+    font-family: ProximaNovaLight;
+
+    &.big {
+      font-size: 1.3em;      
+    }
+  }
+}

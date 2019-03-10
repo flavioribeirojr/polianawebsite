@@ -33,6 +33,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @font-face {
+  font-family: ProximaNovaCondensed;
+  src: url('/static/fonts/proxima-nova-condensed.otf');
+}
+
+@font-face {
   font-family: DancingScript;
   src: url('/static/fonts/DancingScript/DancingScript-Regular.ttf');
 }

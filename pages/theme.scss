@@ -62,6 +62,68 @@ input.input {
   font-weight: 300;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  >.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+
+    &.half {
+      width: 50%;
+    }
+
+    &.is2 {
+      width: 16.66%;
+    }
+
+    &.is3 {
+      width: 25%;
+    }
+
+    &.is4 {
+      width: 33.33%;
+    }
+
+    &.is5 {
+      width: 41.66%;
+    }
+
+    &.is6 {
+      width: 50%;
+    }
+
+    &.is7 {
+      width: 57.99%;
+    }
+
+    &.is8 {
+      width: 66.66%;
+    }
+
+    &.is9 {
+      width: 75%;
+    }
+
+    &.is10 {
+      width: 83.33%;
+    }
+
+    &.is11 {
+      width: 91.66%;
+    }
+
+    &.is12 {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .sectionDescription {
     padding: 1.5rem 1rem;

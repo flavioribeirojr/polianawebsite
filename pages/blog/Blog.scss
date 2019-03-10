@@ -1,0 +1,46 @@
+section.blog {
+  padding: 0 3rem;
+  padding-top: 8rem;
+
+  >.title {
+    font-family: ProximaNovaCondensed;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: .3em;
+    color: $black;
+    font-size: 2.3em;
+  }
+
+  >nav {
+    padding: 0 1rem;
+
+    >ul.categories {
+      list-style: none;
+      padding: 1.2rem 4rem;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+
+      >li {
+        display: inline-block;
+        color: $text;
+        font-size: 1.3em;
+        letter-spacing: .1em;
+        cursor: pointer;
+        position: relative;
+        width: 25rem;
+        text-align: center;
+      }
+    }
+  }
+
+  >.articles {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    justify-content: space-evenly;
+
+    .tinyArticle:not(:last-of-type) {
+      padding-bottom: 1rem;
+    }
+  }
+}
