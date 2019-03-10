@@ -30,6 +30,7 @@ section.blog {
         position: relative;
         width: 25rem;
         text-align: center;
+        font-family: ProximaNovaCondensed;
       }
     }
   }
@@ -37,10 +38,21 @@ section.blog {
   >.articles {
     margin-top: 2rem;
     padding: 0 4rem;
+    padding-bottom: 2rem;
     justify-content: space-evenly;
 
     .tinyArticle:not(:last-of-type) {
       padding-bottom: 1rem;
+    }
+  }
+
+  .oldArticles {
+    margin: 2rem 6rem;
+
+    >hr {
+      border: 1px solid $lightGray;
+      margin: 0 1rem;
+      margin-bottom: 2rem;
     }
   }
 }
