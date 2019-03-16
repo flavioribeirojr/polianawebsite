@@ -73,6 +73,7 @@ input.input {
     flex-direction: column;
     width: 100%;
     padding: 0 1rem;
+    position: relative;
 
     &.half {
       width: 50%;
@@ -120,6 +121,25 @@ input.input {
 
     &.is12 {
       width: 100%;
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+
+      &.is1,
+      &.is2,
+      &.is3,
+      &.is4,
+      &.is5,
+      &.is6,
+      &.is7,
+      &.is8,
+      &.is9,
+      &.is10,
+      &.is11,
+      &.is12 {
+        width: 100%;
+      }
     }
   }
 }

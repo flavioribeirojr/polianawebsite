@@ -35,7 +35,7 @@ const HeaderNav = ({
   isHome,
   onItemClick
 }) => (
-  <nav className={`${inverse && styles.inverse} ${ showMobileMenu && styles['show-mobile-menu'] }`}>
+  <nav className={`${styles.headerNav} ${inverse && styles.inverse} ${ showMobileMenu && styles['show-mobile-menu'] }`}>
     <ul className={styles.links}>
       {
         navigation

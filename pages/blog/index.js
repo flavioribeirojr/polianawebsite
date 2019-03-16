@@ -26,6 +26,9 @@ const Blog = ({ categories, posts: initialPosts }) => {
         </h1>
         <nav>
           <ul className={styles.categories}>
+            <li onClick={() => filterPosts(null)}>
+              Todos
+            </li>
             {
               categories
                 .map((category, idx) => (
@@ -42,27 +45,32 @@ const Blog = ({ categories, posts: initialPosts }) => {
         {
           posts.length > 0 && (
             <>
-              <div className={`${theme.row} ${styles.articles}`}>
-                <div className={`${theme.column} ${ posts.length === 1 ? theme.is12 : theme.is7 }`}>
+              <div className={`${theme.row} ${styles.articles} ${ posts.length === 1 && styles.isOnlyOne }`}>
+                <div
+                  className={`${theme.column} ${theme.is7} ${styles.bigPost}`}>
                   <SpotlightArticlePreview
                     {...posts[0]}
                     showBig
                   />
                 </div>
-                <div className={`${theme.column} ${theme.is4}`}>
-                  {
-                    posts
-                      .slice(1, 3)
-                      .map((post, idx) => (
-                        <div className={`${theme.column} ${styles.tinyArticle}`}>
-                          <SpotlightArticlePreview
-                            key={idx}
-                            {...post}
-                          />
-                        </div>
-                      ))
-                  }
-                </div>
+                {
+                  posts.length > 1 && (
+                    <div className={`${theme.column} ${theme.is4}`}>
+                      {
+                        posts
+                          .slice(1, 3)
+                          .map((post, idx) => (
+                            <div className={`${theme.column} ${styles.tinyArticle}`}>
+                              <SpotlightArticlePreview
+                                key={idx}
+                                {...post}
+                              />
+                            </div>
+                          ))
+                      }
+                    </div>
+                  )
+                }
               </div>
               {
                 posts.length > 3 && (
@@ -75,7 +83,7 @@ const Blog = ({ categories, posts: initialPosts }) => {
                           .map((post, idx) => (
                             <div
                               key={idx}
-                              className={`${theme.column} ${theme.is4}`}
+                              className={`${styles.oldPost} ${theme.column} ${theme.is4}`}
                             >
                               <ArticlePreview
                                 {...post}

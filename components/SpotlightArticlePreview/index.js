@@ -7,7 +7,7 @@ const SpotlightArticlePreview = ({
   image,
   showBig
 }) => (
-  <div className={styles.post}>
+  <div className={`${styles.post} ${showBig && styles.big}`}>
     <figure className={`${styles.cover} ${showBig && styles.big}`}>
       <img
         src={image}

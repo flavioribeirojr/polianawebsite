@@ -14,6 +14,7 @@ import {
   faFacebook
 } from '@fortawesome/free-brands-svg-icons'
 import { ToastContainer } from 'react-toastify'
+import Spinner from '@/Spinner'
 import './index.scss';
 
 library.add(faAngleDown)
@@ -38,6 +39,7 @@ export default ({ children }) => (
       <link rel="stylesheet" type="text/css" href="/static/css/ReactLightbox.css" />
     </Head>
     <ToastContainer />
+    <Spinner />
     { children }
   </div>
 )

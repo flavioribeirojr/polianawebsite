@@ -31,6 +31,12 @@ section.blog {
         width: 25rem;
         text-align: center;
         font-family: ProximaNovaCondensed;
+        transition: color .2s linear;
+
+        &:hover {
+          transition: color .2s linear;
+          color: $linkActive;
+        }
       }
     }
   }
@@ -44,6 +50,10 @@ section.blog {
     .tinyArticle:not(:last-of-type) {
       padding-bottom: 1rem;
     }
+
+    &.isOnlyOne {
+      align-self: center;
+    }
   }
 
   .oldArticles {
@@ -53,6 +63,45 @@ section.blog {
       border: 1px solid $lightGray;
       margin: 0 1rem;
       margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0;
+    padding-top: 7rem;
+
+    >.title {
+      margin-bottom: 0;
+    }
+
+    >nav {
+      >ul.categories {
+        flex-direction: column;
+        padding: 1.2rem 0;
+
+        >li {
+          width: auto;
+          padding: 1rem 0;
+        }
+      }
+    }
+
+    >.articles {
+      flex-direction: column;
+      padding: 0;
+      margin-top: .5rem;
+
+      >.bigPost {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .oldArticles {
+      margin: 2rem 0;
+
+      .oldPost {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
