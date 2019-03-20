@@ -16,7 +16,7 @@ const Blog = ({ categories, posts: initialPosts }) => {
       .then(posts => setPosts(posts))
 
   return (
-    <AppWrapper>
+    <AppWrapper controlScroll={false} inverse>
       <section className={styles.blog}>
         <h1 className={styles.title}>
           Artigos

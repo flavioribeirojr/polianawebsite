@@ -4,8 +4,8 @@ import HeaderNav from '@/HeaderNav'
 import styles from './Header.scss'
 import { getScroll } from 'utils/scroll'
 
-function Header({ isHome, controlScroll }) {
-  const [isInverse, setInverse] = useState(controlScroll)
+function Header({ isHome, controlScroll, inverse }) {
+  const [isInverse, setInverse] = useState(inverse)
   const [showMenu, setShowMenu] = useState(false)
 
   const changeTheme = (scrolledEnough) => {
@@ -52,7 +52,8 @@ function Header({ isHome, controlScroll }) {
 
 Header.defaultProps = {
   isHome: true,
-  controlScroll: false
+  controlScroll: false,
+  inverse: true
 }
 
 export default Header

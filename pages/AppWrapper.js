@@ -35,6 +35,7 @@ const AppWrapper = ({
   title,
   isHome,
   controlScroll,
+  inverse,
   children
 }) => (
   <div>
@@ -53,6 +54,7 @@ const AppWrapper = ({
     <Header
       isHome={isHome}
       controlScroll={controlScroll}
+      inverse={inverse}
     />
     <div className={!controlScroll ? styles.wrapper : ''}>
       { children }
@@ -64,7 +66,8 @@ const AppWrapper = ({
 AppWrapper.defaultProps = {
   title: 'Dra. Poliana',
   isHome: false,
-  controlScroll: false
+  controlScroll: false,
+  inverse: false
 }
 
 export default AppWrapper
