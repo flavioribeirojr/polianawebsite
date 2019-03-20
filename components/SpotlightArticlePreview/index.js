@@ -5,6 +5,7 @@ const SpotlightArticlePreview = ({
   title,
   description,
   image,
+  slug,
   showBig
 }) => (
   <div className={`${styles.post} ${showBig && styles.big}`}>
@@ -14,9 +15,12 @@ const SpotlightArticlePreview = ({
         alt="Article image preview"
       />
     </figure>
-    <h2 className={`${styles.title} ${showBig && styles.big}`}>
+    <a
+      className={`${styles.title} ${showBig && styles.big}`}
+      href={`/artigo/${slug}`}
+    >
       { title }
-    </h2>
+    </a>
     <article className={`${styles.description} ${showBig && styles.big}`}>
       { description }
     </article>

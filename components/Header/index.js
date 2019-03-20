@@ -50,7 +50,7 @@ function Header({ isHome }) {
 }
 
 Header.defaultProps = {
-  showInverse: true
+  isHome: true
 }
 
 export default Header

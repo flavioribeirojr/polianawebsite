@@ -15,7 +15,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { ToastContainer } from 'react-toastify'
 import Spinner from '@/Spinner'
-import './index.scss';
+import Header from '@/Header'
+import './index.scss'
+import styles from './index.scss'
 
 library.add(faAngleDown)
 library.add(faBars)
@@ -26,10 +28,14 @@ library.add(faWhatsapp)
 library.add(faInstagram)
 library.add(faFacebook)
 
-export default ({ children }) => (
+const AppWrapper = ({
+  title,
+  isHome,
+  children
+}) => (
   <div>
     <Head>
-      <title>Dra. Poliana</title>
+      <title>{ title }</title>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
@@ -40,6 +46,18 @@ export default ({ children }) => (
     </Head>
     <ToastContainer />
     <Spinner />
-    { children }
+    <Header
+      isHome={isHome}
+    />
+    <div className={!isHome && styles.wrapper}>
+      { children }
+    </div>
   </div>
 )
+
+AppWrapper.defaultProps = {
+  title: 'Dra. Poliana',
+  isHome: false
+}
+
+export default AppWrapper

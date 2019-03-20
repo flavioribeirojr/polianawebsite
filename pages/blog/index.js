@@ -8,8 +8,6 @@ import { getPosts } from 'domains/Blog/service'
 import styles from './Blog.scss'
 import theme from 'pages/theme.scss'
 
-const Header = Dynamic(import('@/Header'))
-
 const Blog = ({ categories, posts: initialPosts }) => {
   const [ posts, setPosts ] = useState(initialPosts);
 
@@ -19,7 +17,6 @@ const Blog = ({ categories, posts: initialPosts }) => {
 
   return (
     <AppWrapper>
-      <Header isHome={false} />
       <section className={styles.blog}>
         <h1 className={styles.title}>
           Artigos

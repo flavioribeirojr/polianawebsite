@@ -11,8 +11,15 @@ import styles from './ArticlePreview.scss'
  * @param {String} props.category The article category
  * @param {String} props.image The article image
  * @param {String} props.description The article description
+ * @param {String} props.slug The article slug
  */
-const ArticlePreview = ({ title, category, description, image }) => (
+const ArticlePreview = ({
+  title,
+  category,
+  description,
+  image,
+  slug
+}) => (
   <div className={styles.articlePreview}>
     <header>
       <img src={image} />
@@ -24,7 +31,7 @@ const ArticlePreview = ({ title, category, description, image }) => (
         { description }
       </article>
       <footer>
-        <a href="#">
+        <a href={`/artigo/${slug}`}>
           Continue lendo <FontAwesomeIcon icon="angle-right" />
         </a>
       </footer>

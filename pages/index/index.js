@@ -1,5 +1,4 @@
 import React from 'react'
-import Dynamic from 'next/dynamic'
 import styles from './Home.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-scroll'
@@ -11,13 +10,11 @@ import Contact from './Sections/Contact'
 import Footer from './Sections/Footer'
 import InstagramFeed from './Sections/InstagramFeed'
 import AppWrapper from 'pages/AppWrapper'
+import { getPosts } from 'domains/Blog/service'
 
-const Header = Dynamic(import('@/Header'))
-
-const Home = () => (
-  <AppWrapper>
+const Home = ({ posts }) => (
+  <AppWrapper isHome={true}>
     <>
-      <Header />
       <section id="home" className={styles.home}>
         <section className={styles.body}>
           <h1 className={styles.description}>Lorem ipsum dolor sit amet</h1>
@@ -42,10 +39,13 @@ const Home = () => (
       <Depositions />
       <Contact />
       <InstagramFeed />
-      <Articles />
+      <Articles posts={posts} />
       <Footer />
     </>
   </AppWrapper>
 )
+
+Home.getInitialProps = () =>
+  getPosts().then(posts => ({ posts: posts.slice(0, 3) }))
 
 export default Home
