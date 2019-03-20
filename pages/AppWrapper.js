@@ -1,5 +1,6 @@
 import React from 'react'
-import Head from 'next/head';
+import Head from 'next/head'
+import Dynamic from 'next/dynamic'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faAngleDown,
@@ -15,9 +16,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { ToastContainer } from 'react-toastify'
 import Spinner from '@/Spinner'
-import Header from '@/Header'
 import './index.scss'
 import styles from './index.scss'
+import Footer from '@/Footer'
+
+const Header = Dynamic(() => import('@/Header'))
 
 library.add(faAngleDown)
 library.add(faBars)
@@ -31,6 +34,7 @@ library.add(faFacebook)
 const AppWrapper = ({
   title,
   isHome,
+  controlScroll,
   children
 }) => (
   <div>
@@ -48,16 +52,19 @@ const AppWrapper = ({
     <Spinner />
     <Header
       isHome={isHome}
+      controlScroll={controlScroll}
     />
-    <div className={!isHome && styles.wrapper}>
+    <div className={!controlScroll ? styles.wrapper : ''}>
       { children }
     </div>
+    <Footer />
   </div>
 )
 
 AppWrapper.defaultProps = {
   title: 'Dra. Poliana',
-  isHome: false
+  isHome: false,
+  controlScroll: false
 }
 
 export default AppWrapper

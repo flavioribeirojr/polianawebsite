@@ -7,13 +7,15 @@ import Newsletter from './Sections/Newsletter'
 import Articles from './Sections/Articles'
 import Benefits from './Sections/Benefits'
 import Contact from './Sections/Contact'
-import Footer from './Sections/Footer'
 import InstagramFeed from './Sections/InstagramFeed'
 import AppWrapper from 'pages/AppWrapper'
 import { getPosts } from 'domains/Blog/service'
 
 const Home = ({ posts }) => (
-  <AppWrapper isHome={true}>
+  <AppWrapper
+    isHome
+    controlScroll
+  >
     <>
       <section id="home" className={styles.home}>
         <section className={styles.body}>
@@ -40,7 +42,6 @@ const Home = ({ posts }) => (
       <Contact />
       <InstagramFeed />
       <Articles posts={posts} />
-      <Footer />
     </>
   </AppWrapper>
 )
